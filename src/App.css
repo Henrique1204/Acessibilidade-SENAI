@@ -33,3 +33,13 @@ img {
     max-width: 100%;
     display: block;
 }
+
+.App {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+.App aside {
+    grid-column: 1;
+    grid-row: 1 / 3;
+}
