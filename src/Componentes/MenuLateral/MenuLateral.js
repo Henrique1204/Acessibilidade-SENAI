@@ -2,6 +2,7 @@ import React from 'react';
 import estilos from './MenuLateral.module.css';
 import Navegacao from '../Navegacao/Navegacao';
 import OpcoesAcessibilidade from '../OpcoesAcessibilidade/OpcoesAcessibilidade';
+import Icone from '../Util/Icone';
 
 const MenuLateral = () => {
     return (
@@ -21,6 +22,8 @@ const MenuLateral = () => {
                 <h1>Opções de acessibilidades</h1>
                 <OpcoesAcessibilidade />
             </div>
+
+            <Icone nome="cog" />
         </aside>
     );
 };
