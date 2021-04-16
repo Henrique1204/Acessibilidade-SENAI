@@ -9,8 +9,21 @@
 
 body {
     font-family: sans-serif;
-    color: #222;
-    background-color: #FDFDFD;
+    color: #555;
+    background-color: #FAFAFA;
+    --corPrincipal: #309ADB;
+    --corSecundaria: #52BDFF;
+}
+
+/* Temas */
+body.temaRoxo {
+    --corPrincipal: #8E4DFF;
+    --corSecundaria: #7B32FA;
+}
+
+body.temaEscuro {
+    --corPrincipal: #024;
+    --corSecundaria: #06A;
 }
 
 h1, h2, h3, h4 {
