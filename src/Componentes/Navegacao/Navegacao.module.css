@@ -3,6 +3,10 @@
     color: #555;
 }
 
+.Navegacao li {
+    margin-top: 0.5rem;
+}
+
 .Navegacao a {
     padding: 0.2rem;
     display: block;
@@ -15,4 +19,14 @@
 
 .Navegacao a:focus {
     text-decoration: underline;
+}
+
+@media (max-width: 730px) {
+    .Navegacao ul {
+        padding-left: 0;
+    }
+
+    .Navegacao a {
+        padding: 0.5rem;
+    }
 }

@@ -20,3 +20,13 @@
 .OpcoesAcessibilidade button:hover, .OpcoesAcessibilidade button:focus {
     color: var(--corPrincipal);
 }
+
+@media (max-width: 730px) {
+    .OpcoesAcessibilidade {
+        padding-left: 0;
+    }
+
+    .OpcoesAcessibilidade button {
+        padding: 0.5rem;
+    }
+}
