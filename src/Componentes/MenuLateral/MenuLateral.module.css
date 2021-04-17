@@ -1,6 +1,5 @@
 .MenuLateral {
     padding: 1rem;
-    color: var(--corPrincipal);
     background-color: #FFF;
     box-shadow: 2px 2px 8px rgba(34, 34, 34, 0.1);
     position: relative;
@@ -9,6 +8,7 @@
 .MenuLateral h1, h2 {
     font-size: 1rem;
     font-weight: normal;
+    color: var(--corPrincipal);
 }
 
 .MenuLateral div {
@@ -16,5 +16,61 @@
 }
 
 .MenuLateral .acessibilidade {
-    border-top: 1px solid;
+    border-top: 1px solid var(--corPrincipal);
+}
+
+.MenuLateral .hamburguer {
+    max-width: 48px;
+    max-height: 48px;
+    padding: 0.5rem;
+    border: none;
+    display: block;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+}
+
+.MenuLateral .hamburguer span {
+    width: 2rem;
+    height: 2px;
+    display: block;
+    background-color: #555;
+    transition: margin-left 0.3s ease;
+}
+
+.MenuLateral .hamburguer span + span {
+    margin-top: 6px;
+}
+
+.MenuLateral .hamburguer span:nth-child(1), .MenuLateral .hamburguer span:nth-child(3) {
+    margin-left: -0.5rem;
+}
+
+.MenuLateral .hamburguer span:nth-child(2) {
+    margin-left: 0.5rem;
+}
+
+.MenuLateral .hamburguer:hover span, .MenuLateral .hamburguer:focus span {
+    margin-left: 0;
+    background-color: var(--corPrincipal);
+}
+
+.MenuLateral .icone {
+    width: 100%;
+    border: none;
+    font-size: 2rem;
+    text-align: center;
+    background-color: transparent;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
+    outline: none;
+    transition: color 0.3s ease;
+}
+
+.MenuLateral .icone:hover, .MenuLateral .icone:focus {
+    color: var(--corPrincipal);
 }

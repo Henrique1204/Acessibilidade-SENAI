@@ -7,8 +7,7 @@ import Icone from '../Util/Icone';
 const MenuLateral = () => {
     return (
         <aside className={estilos.MenuLateral}>
-            <div className={estilos.conteudo}>
-                <button>
+                <button className={estilos.hamburguer}>
                     <span></span>
                     <span></span>
                     <span></span>
@@ -24,10 +23,9 @@ const MenuLateral = () => {
                     <OpcoesAcessibilidade />
                 </div>
 
-                <div className={estilos.icone}>
+                <button className={estilos.icone}>
                     <Icone nome="cog" />
-                </div>
-            </div>
+                </button>
         </aside>
     );
 };
