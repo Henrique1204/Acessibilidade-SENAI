@@ -1,0 +1,35 @@
+.Header {
+    padding: 4rem 0;
+}
+
+.Header h1, h3 {
+    width: 100%;
+}
+
+.Header h3 {
+    font-size: 1.125rem;
+    font-weight: normal;
+    color: #888;
+}
+
+.Header h1 {
+    margin-top: 0.5rem;
+    font-size: 3rem;
+    color: var(--corPrincipal);
+}
+
+@media (max-width: 990px) {
+    .Header h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 730px) {
+    .Header {
+        padding: 2rem 0;
+    }
+
+    .Header h1 {
+        font-size: 1.5rem;
+    }
+}
