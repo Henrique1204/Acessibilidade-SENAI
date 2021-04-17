@@ -48,13 +48,12 @@ img {
 }
 
 /* Estilos Gerais*/
-.App {
+.containerGeral {
     display: flex;
-    flex-wrap: wrap;
     position: relative;
 }
 
-.App main {
+.containerGeral main {
     min-height: calc(100vh - 221px);
 }
 
