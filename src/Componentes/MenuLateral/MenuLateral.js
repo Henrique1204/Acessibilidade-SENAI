@@ -7,11 +7,13 @@ import Icone from '../Util/Icone';
 const MenuLateral = () => {
     const [ativo, setAtivo] = React.useState(false);
 
+    const menuToggle = () => setAtivo((ativo) => !ativo);
+
     return (
         <aside
             className={`${estilos.MenuLateral} ${(ativo) ? estilos.aberto : estilos.fechado}`}
         >
-                <button className={estilos.hamburguer} onClick={() => setAtivo((ativo) => !ativo)}>
+                <button className={estilos.hamburguer} onClick={menuToggle}>
                     <span></span>
                     <span></span>
                     <span></span>
@@ -32,7 +34,7 @@ const MenuLateral = () => {
                 ) }
 
                 { !ativo  && (
-                    <button className={estilos.icone}>
+                    <button className={estilos.icone} onClick={menuToggle}>
                         <Icone nome="cog" />
                     </button>
                 ) }

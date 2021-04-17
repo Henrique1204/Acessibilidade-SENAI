@@ -128,7 +128,7 @@
     background-color: transparent;
     display: block;
     position: absolute;
-    bottom: 0;
+    bottom: 1rem;
     left: 0;
     cursor: pointer;
     outline: none;
@@ -137,4 +137,50 @@
 
 .MenuLateral .icone:hover, .MenuLateral .icone:focus {
     color: var(--corPrincipal);
+}
+
+@media (max-width: 730px) {
+    @keyframes crescer {
+        from {
+            max-height: 80px;
+        }
+        to {
+            max-height: 100vh;
+        }
+    }
+    
+    @keyframes encolher {
+        from {
+            max-height: 100vh;
+        }
+        to {
+            max-height: 80px;
+        }
+    }
+    
+    @keyframes aparecer {
+        from {
+            opacity: 0;
+            transform: translateY(-30px);
+        } to {
+            opacity: 1;
+            transform: initial;
+        }
+    }
+
+    .MenuLateral {
+        max-width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+    }
+
+    .MenuLateral .icone {
+        width: auto;
+        top: 1.5rem;
+        left: auto;
+        right: 1rem;
+        bottom: auto;
+    }
 }
