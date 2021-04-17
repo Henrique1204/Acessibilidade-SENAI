@@ -1,0 +1,18 @@
+.Navegacao ul {
+    padding-left: 1rem;
+    color: #555;
+}
+
+.Navegacao a {
+    padding: 0.2rem;
+    display: block;
+    outline: none;
+}
+
+.Navegacao a:hover, .Navegacao .ativo, .Navegacao a:focus {
+    color: var(--corPrincipal);
+}
+
+.Navegacao a:focus {
+    text-decoration: underline;
+}
