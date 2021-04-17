@@ -3,11 +3,18 @@ import estilos from './MenuLateral.module.css';
 import Navegacao from '../Navegacao/Navegacao';
 import OpcoesAcessibilidade from '../OpcoesAcessibilidade/OpcoesAcessibilidade';
 import Icone from '../Util/Icone';
+import { useLocation } from 'react-router';
 
 const MenuLateral = () => {
     const [ativo, setAtivo] = React.useState(false);
+    const { pathname } = useLocation();
 
     const menuToggle = () => setAtivo((ativo) => !ativo);
+
+    React.useEffect(() => {
+        setAtivo(false);
+        window.scrollTo({ behavior: "smooth", top: 0 });
+    }, [pathname]);
 
     return (
         <aside
