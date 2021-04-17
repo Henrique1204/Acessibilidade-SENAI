@@ -1,0 +1,32 @@
+.OpcoesAcessibilidade {
+    padding-left: 1rem;
+}
+
+.OpcoesAcessibilidade li {
+    margin-top: 0.5rem;
+}
+
+.OpcoesAcessibilidade button {
+    padding: 0.2rem;
+    border: none;
+    font-size: 1rem;
+    color: #555;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    transition: color 0.3s ease;
+}
+
+.OpcoesAcessibilidade button:hover, .OpcoesAcessibilidade button:focus {
+    color: var(--corPrincipal);
+}
+
+@media (max-width: 730px) {
+    .OpcoesAcessibilidade {
+        padding-left: 0;
+    }
+
+    .OpcoesAcessibilidade button {
+        padding: 0.5rem;
+    }
+}
