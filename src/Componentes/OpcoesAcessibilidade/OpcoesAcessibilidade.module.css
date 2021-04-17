@@ -20,7 +20,3 @@
 .OpcoesAcessibilidade button:hover, .OpcoesAcessibilidade button:focus {
     color: var(--corPrincipal);
 }
-
-.OpcoesAcessibilidade button:focus {
-    text-decoration: underline;
-}
