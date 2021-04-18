@@ -44,6 +44,10 @@ p, a, ul, li, small, textarea {
     line-height: 1.5;
 }
 
+p {
+    font-size: 1.125rem;
+}
+
 a {
     text-decoration: none;
 }
@@ -53,13 +57,31 @@ ul, li {
 }
 
 img {
+    width: 100%;
     max-width: 100%;
     display: block;
+}
+
+.img_container {
+    border-radius: 4px;
+    overflow: hidden;
 }
 
 /* Estilos Gerais*/
 main {
     min-height: calc(100vh - 221px);
+    padding-bottom: 4rem;
+}
+
+main p {
+    margin-top: 2rem;
+}
+
+.titulo_sessao {
+    width: 100%;
+    margin-top: 4rem;
+    font-size: 1.75rem;
+    color: var(--corPrincipal);
 }
 
 .conteudo {
@@ -86,9 +108,49 @@ main {
     margin-right: 15px;
 }
 
+.metade {
+    width: calc(50% - 30px);
+}
+
+.img_container.metade {
+    margin-top: 2rem;
+}
+
+.lista {
+    width: 100%;
+    margin-top: 2rem;
+    padding-left: 2rem;
+    font-size: 1rem;
+}
+
+.lista li {
+    display: flex;
+    align-items: center;
+}
+
+.lista li + li {
+    margin-top: 1rem;
+}
+
+.lista li:before {
+    content: '';
+    width: 100%;
+    max-width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+    background-color: var(--corPrincipal);
+    display: block;
+    position: relative;
+}
+
 @media (max-width: 990px) {
     main {
         min-height: calc(100vh - 201px);
+    }
+
+    .metade {
+        width: 100%;
     }
 
     .container {
@@ -104,6 +166,10 @@ main {
 @media (max-width: 730px) {
     main {
         min-height: calc(100vh - 158px);
+    }
+
+    .lista {
+        padding-left: 0;
     }
 
     .conteudo, .conteudo.conteudo.menuAberto {
