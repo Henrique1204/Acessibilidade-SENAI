@@ -15,7 +15,6 @@ const CardGithub = ({ usuario }) => {
                 const res = await fetch(`https://api.github.com/users/${usuario}`);
                 const json = await res.json();
 
-                console.log(json);
                 if (!res.ok) throw new Error('Falha ao buscar na API.');
 
                 setDados({
