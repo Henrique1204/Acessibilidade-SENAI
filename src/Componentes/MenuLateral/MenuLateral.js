@@ -5,8 +5,7 @@ import OpcoesAcessibilidade from '../OpcoesAcessibilidade/OpcoesAcessibilidade';
 import Icone from '../Util/Icone';
 import { useLocation } from 'react-router';
 
-const MenuLateral = () => {
-    const [ativo, setAtivo] = React.useState(false);
+const MenuLateral = ({ ativo, setAtivo }) => {
     const { pathname } = useLocation();
 
     const menuToggle = () => setAtivo((ativo) => !ativo);
@@ -14,7 +13,7 @@ const MenuLateral = () => {
     React.useEffect(() => {
         setAtivo(false);
         window.scrollTo({ behavior: "smooth", top: 0 });
-    }, [pathname]);
+    }, [pathname, setAtivo]);
 
     return (
         <aside

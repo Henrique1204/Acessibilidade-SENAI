@@ -6,18 +6,17 @@ import Rotas from './Rotas';
 import Footer from './Componentes/Footer/Footer';
 
 const App = () => {
+  const [menuAtivo, setMenuAtivo] = React.useState(false);
+
   return (
     <>
-      <div className="containerGeral">
-        <MenuLateral />
+      <MenuLateral ativo={menuAtivo} setAtivo={setMenuAtivo} />
     
-        <div className="conteudo">
-          <Header />
-          <Rotas />
-        </div>
+      <div className={`conteudo ${(menuAtivo) ? 'menuAberto' : ''}`}>
+        <Header />
+        <Rotas />
+        <Footer />
       </div>
-
-      <Footer />
     </>
   );
 };
