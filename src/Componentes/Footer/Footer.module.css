@@ -1,3 +1,26 @@
 .Footer {
     width: 100%;
+    padding: 2rem 0;
+    background-color: #FFF;
+    text-align: center;
+}
+
+.Footer h1 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: var(--corPrincipal);
+}
+
+.Footer a {
+    font-size: 1.125rem;
+    transition: color 0.3s ease;
+}
+
+.Footer a:hover, .Footer a:focus {
+    color: var(--corPrincipal);
+}
+
+.Footer a:focus {
+    text-decoration: underline;
 }

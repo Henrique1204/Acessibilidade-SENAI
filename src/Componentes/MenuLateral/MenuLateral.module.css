@@ -33,7 +33,6 @@
     padding: 1rem;
     white-space: nowrap;
     background-color: #FFF;
-    box-shadow: 2px 2px 8px rgba(34, 34, 34, 0.1);
     position: fixed;
     z-index: 1;
     overflow: hidden;
