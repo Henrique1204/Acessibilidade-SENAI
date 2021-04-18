@@ -1,0 +1,135 @@
+.Card {
+    width: calc(50% - 30px);
+    min-height: 240px;
+    padding: 2rem 2rem;
+    border-radius: 6px;
+    margin-bottom: 2rem;
+    text-align: center;
+    background-color: var(--corBg);
+    box-shadow: 2px 2px 6px rgba(34, 34, 34, 0.1);
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: minmax(120px, 200px) 1fr;
+    align-items: center;
+    overflow: hidden;
+}
+
+@keyframes rodar {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loading div {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto;
+    box-shadow:
+        -0.5rem 0.5rem 0 4px var(--corSecundaria),
+        0.5rem 0.5rem 0 4px var(--corPrincipal),
+        0.5rem -0.5rem 0 4px rgba(0, 0, 0, 0.3),
+        0.5rem -0.5rem 0 4px var(--corPrincipal),
+        -0.5rem -0.5rem 0 4px rgba(255, 255, 255, 0.5),
+        -0.5rem -0.5rem 0 4px var(--corSecundaria)
+    ;
+    display: block;
+    grid-column: 1 / 3;
+    animation: rodar 1s ease-out infinite;
+}
+
+@keyframes aparecerConteudo {
+    to {
+        opacity: initial;
+        transform: initial;
+    }
+}
+
+.conteudo > * {
+    opacity: 0;
+    transform: translateX(20px);
+    animation: aparecerConteudo 0.3s ease forwards;
+}
+
+.conteudo div {
+    border-radius: 50%;
+    grid-row: 1 / 4;
+    box-shadow:
+        -0.5rem 0.5rem 0 4px var(--corSecundaria),
+        0.5rem 0.5rem 0 4px var(--corPrincipal),
+        0.5rem -0.5rem 0 4px rgba(0, 0, 0, 0.3),
+        0.5rem -0.5rem 0 4px var(--corPrincipal),
+        -0.5rem -0.5rem 0 4px rgba(255, 255, 255, 0.5),
+        -0.5rem -0.5rem 0 4px var(--corSecundaria)
+    ;
+}
+
+.conteudo h2 {
+    color: var(--corPrincipal);
+}
+
+.conteudo p {
+    margin-top: 0;
+    font-size: 1rem;
+}
+
+.conteudo a {
+    width: 200px;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    margin: 0 auto;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #F4F4F4;
+    background-color: var(--corPrincipal);
+    transition: background-color 0.3s ease;
+}
+
+.conteudo svg {
+    font-size: 2rem;
+    transition: transform 0.5s ease;
+}
+
+.conteudo a:hover {
+    background-color: var(--corSecundaria);
+}
+
+.conteudo a:hover svg {
+    transform: rotate(360deg);
+}
+
+@media (max-width: 1130px) {
+    .Card {
+        grid-template-columns: 1fr;
+    }
+
+    .conteudo div {
+        max-width: 220px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 990px) {
+    .Card {
+        padding: 2rem 1rem;
+    }
+
+    .conteudo div {
+        max-width: 120px;
+    }
+
+    .conteudo a {
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 730px) {
+    .Card {
+        width: 100%;
+    }
+}

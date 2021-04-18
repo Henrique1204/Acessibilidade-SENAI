@@ -41,7 +41,7 @@ const MenuLateral = ({ ativo, setAtivo }) => {
 
                 { !ativo  && (
                     <button className={estilos.icone} onClick={menuToggle}>
-                        <Icone nome="cog" />
+                        <Icone tipo="fa" nome="cog" />
                     </button>
                 ) }
         </aside>
