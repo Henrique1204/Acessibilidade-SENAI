@@ -10,9 +10,10 @@
 body {
     font-family: sans-serif;
     color: #555;
-    background-color: #FAFAFA;
+    background-color: #EFEFEF;
     --corPrincipal: #309ADB;
     --corSecundaria: #52BDFF;
+    --corBg: #FFF;
 }
 
 @media (max-width: 730px) {
@@ -28,8 +29,11 @@ body.temaRoxo {
 }
 
 body.temaEscuro {
-    --corPrincipal: #024;
-    --corSecundaria: #06A;
+    color: #F4F4F4;
+    background-color: #353540;
+    --corPrincipal: #06A;
+    --corSecundaria: #024;
+    --corBg: #22222A;
 }
 
 h1, h2, h3, h4 {

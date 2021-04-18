@@ -1,7 +1,7 @@
 .Footer {
     width: 100%;
     padding: 2rem 0;
-    background-color: #FFF;
+    background-color: var(--corBg);
     text-align: center;
 }
 
@@ -9,7 +9,6 @@
     margin-bottom: 1rem;
     font-size: 1.5rem;
     font-weight: normal;
-    color: var(--corPrincipal);
 }
 
 .Footer a {
