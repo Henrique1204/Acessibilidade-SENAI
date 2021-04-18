@@ -144,6 +144,24 @@ main p {
     position: relative;
 }
 
+.call-to-action {
+    padding: 1rem;
+    border-radius: 6px;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 1.125rem;
+    text-transform: capitalize;
+    color: #F4F4F4;
+    background-color: var(--corPrincipal);
+    display: block;
+    transition: 0.3s ease;
+}
+
+.call-to-action:hover {
+    background-color: var(--corSecundaria);
+    transform: scale(1.05);
+}
+
 @media (max-width: 990px) {
     main {
         min-height: calc(100vh - 201px);
