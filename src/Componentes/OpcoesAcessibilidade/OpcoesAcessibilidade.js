@@ -1,7 +1,7 @@
 import React from 'react';
 import estilos from './OpcoesAcessibilidade.module.css';
 
-const OpcoesAcessibilidade = () => {
+const OpcoesAcessibilidade = ({ cliqueNoAtalho }) => {
     return (
         <ul className={estilos.OpcoesAcessibilidade}>
             <li>
@@ -9,11 +9,7 @@ const OpcoesAcessibilidade = () => {
             </li>
 
             <li>
-                <button>Atalhos de teclado</button>
-            </li>
-
-            <li>
-                <button>Formatar Texto</button>
+                <button onClick={cliqueNoAtalho}>Atalhos de teclado</button>
             </li>
         </ul>
     );

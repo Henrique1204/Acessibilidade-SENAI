@@ -12,6 +12,11 @@ const MenuLateral = ({ ativo, setAtivo }) => {
 
     const menuToggle = () => setAtivo((ativo) => !ativo);
 
+    const fecharModalAtalhos = (valor) => {
+        setModalAtalhos(valor);
+        window.sessionStorage.setItem('visualizado', 'true');
+    };
+
     React.useEffect(() => {
         setAtivo(false);
         window.scrollTo({ behavior: "smooth", top: 0 });
@@ -22,10 +27,13 @@ const MenuLateral = ({ ativo, setAtivo }) => {
         if (sessaoValida !== "true") setModalAtalhos(true);
     }, []);
 
-    const fecharModalAtalhos = (valor) => {
-        setModalAtalhos(valor);
-        window.sessionStorage.setItem('visualizado', 'true');
-    };
+    React.useEffect(() => {
+        window.addEventListener('keydown', ({ key, altKey }) => {
+            if (altKey && key === 'm') setAtivo(true);
+            if (key === 'Escape') setAtivo(false);
+            if (altKey && key === 't') setModalAtalhos(true);
+        });
+    }, [setAtivo]);
 
     return (
         <>
@@ -47,7 +55,9 @@ const MenuLateral = ({ ativo, setAtivo }) => {
 
                             <div className={estilos.acessibilidade}>
                                 <h1>Opções de acessibilidades</h1>
-                                <OpcoesAcessibilidade />
+                                <OpcoesAcessibilidade
+                                    cliqueNoAtalho={() => setModalAtalhos(true)}
+                                />
                             </div>
                         </>
                     ) }
