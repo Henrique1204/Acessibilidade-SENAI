@@ -22,7 +22,7 @@ const ModalContainer = ({ setAtivo, children, classe }) => {
     }, [setAtivo]);
   
     return (
-      <div className={estilos.Modal} onClick={fecharModal} ref={fundoRef}>
+      <section className={estilos.Modal} onClick={fecharModal} ref={fundoRef}>
         <div className={`${estilos.CardModal} ${(classe) ? classe : ''}`}>
           <button className={estilos.ModalFechar} onClick={() => setAtivo(false)}>
             <Icone tipo="fa" nome="times" />
@@ -30,7 +30,7 @@ const ModalContainer = ({ setAtivo, children, classe }) => {
 
             { children }
         </div>
-      </div>
+      </section>
     );
   };
 
