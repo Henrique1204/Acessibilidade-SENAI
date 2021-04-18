@@ -23,3 +23,9 @@
 .Footer a:focus {
     text-decoration: underline;
 }
+
+@media (max-width: 730px) {
+    .Footer h1 {
+        font-size: 1.125rem;
+    }
+}
