@@ -1,11 +1,11 @@
 import React from 'react';
 import estilos from './OpcoesAcessibilidade.module.css';
 
-const OpcoesAcessibilidade = ({ cliqueNoAtalho }) => {
+const OpcoesAcessibilidade = ({ cliqueNoAtalho, cliqueNoCores }) => {
     return (
         <ul className={estilos.OpcoesAcessibilidade}>
             <li>
-                <button>Cores</button>
+                <button onClick={cliqueNoCores}>Cores</button>
             </li>
 
             <li>

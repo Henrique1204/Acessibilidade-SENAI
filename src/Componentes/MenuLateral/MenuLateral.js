@@ -64,6 +64,7 @@ const MenuLateral = ({ ativo, setAtivo }) => {
                                 <h1>Opções de acessibilidades</h1>
                                 <OpcoesAcessibilidade
                                     cliqueNoAtalho={() => setModalAtalhos(true)}
+                                    cliqueNoCores={() => setModalCores(true)}
                                 />
                             </div>
                         </>
@@ -91,7 +92,7 @@ const MenuLateral = ({ ativo, setAtivo }) => {
                 </ModalContainer>
             ) }
 
-            { true && <ModalCores setAtivo={fecharModalCores} /> }
+            { modalCores && <ModalCores setAtivo={fecharModalCores} /> }
         </>
     );
 };
