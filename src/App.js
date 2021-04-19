@@ -9,7 +9,8 @@ const App = () => {
   const [menuAtivo, setMenuAtivo] = React.useState(false);
 
   React.useEffect(() => {
-    document.body.classList.add(window.localStorage.getItem('tema') || '');
+    const temaSalvo = window.localStorage.getItem('tema');
+    if (temaSalvo) document.body.classList.add(temaSalvo);
   }, []);
 
   return (
