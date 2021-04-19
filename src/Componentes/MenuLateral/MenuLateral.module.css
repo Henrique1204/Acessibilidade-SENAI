@@ -34,8 +34,11 @@
     white-space: nowrap;
     background-color: var(--corBg);
     position: fixed;
+    top: 0;
+    bottom: 0;
     z-index: 1;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .MenuLateral.fechado {
@@ -140,35 +143,6 @@
     color: var(--corPrincipal);
 }
 
-/* Estilos dos modais */
-.ModalAtalho {
-    max-width: 360px;
-}
-
-.ModalAtalho h2 {
-    margin: 1rem auto 2rem;
-    text-align: center;
-    text-transform: capitalize;
-    color: var(--corPrincipal);
-}
-
-.ModalAtalho li + li {
-    margin-top: 1rem;
-}
-
-.ModalAtalho span {
-    width: 100%;
-    max-width: 80px;
-    padding: 0.2rem 0.4rem;
-    border-radius: 4px;
-    border: 1px solid #CCC;
-    text-align: center;
-    background-color: #EEE;
-    margin-right: 2rem;
-    font-size: 1.125rem;
-    display: inline-block;
-}
-
 @media (max-width: 730px) {
     @keyframes crescer {
         from {
@@ -212,10 +186,5 @@
         left: auto;
         right: 1rem;
         bottom: auto;
-    }
-
-    .ModalAtalho span {
-        font-size: 1rem;
-        margin-right: 0.5rem;
     }
 }

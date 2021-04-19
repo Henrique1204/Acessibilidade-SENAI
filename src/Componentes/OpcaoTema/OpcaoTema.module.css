@@ -5,6 +5,11 @@
 
 .opcaoTema label {
     cursor: pointer;
+    outline: none;
+}
+
+.opcaoTema label:focus::before {
+    box-shadow: 0 0 0 2px var(--corBg), 0 0 0 3px #48BEFF;
 }
 
 .opcaoTema label::before {
@@ -20,6 +25,10 @@
 
 .opcaoTema.ativo label::before {
     box-shadow: 0 0 0 2px #48BEFF, 0 0 0 3px currentColor;
+}
+
+.opcaoTema label:focus::before {
+    box-shadow: 0 0 0 2px var(--corBg), 0 0 0 4px #48BEFF;
 }
 
 .opcaoTema input {
