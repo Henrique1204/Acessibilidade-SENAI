@@ -4,11 +4,25 @@ import imgTemaRoxo from '../Assets/home_temaRoxo.png';
 import imgTemaEscuro from '../Assets/home_temaEscuro.png';
 
 const Home = () => {
+    const [temaImg, setTemaImg] = React.useState('');
+
+    React.useEffect(() => {
+        const temaSalvo = window.localStorage.getItem('tema');
+        if (temaSalvo && temaSalvo === 'temaRoxo') {
+            setTemaImg(imgTemaRoxo);
+        }
+        else if (temaSalvo && temaSalvo === 'temaEscuro') {
+            setTemaImg(imgTemaEscuro);
+        }
+        else {
+            setTemaImg(imgTemaAzul);
+        };
+    }, []);
     return (
         <section className="container">
             <div className="img_container">
                 <img
-                    src={imgTemaAzul}
+                    src={temaImg}
                     alt=""
                 />
             </div>
