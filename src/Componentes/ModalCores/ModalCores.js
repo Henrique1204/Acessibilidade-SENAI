@@ -19,7 +19,7 @@ const ModalCores = ({ setAtivo }) => {
     }, [limparTemas]);
 
     React.useEffect(() => {
-        if (opcaoTema !== 'temaPadrao') definirTema(opcaoTema);
+        if (opcaoTema && opcaoTema !== 'temaPadrao') definirTema(opcaoTema);
         else limparTemas();
     }, [opcaoTema, definirTema, limparTemas]);
 
