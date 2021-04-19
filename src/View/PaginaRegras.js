@@ -1,10 +1,11 @@
 import React from 'react';
 import imgIntro from '../Assets/intro_wcag.jpg'
+import CardRegras from '../Componentes/CardRegras/CardRegras';
 
 const PaginaRegras = () => {
     return (
         <section className="container">
-            <div className="img_container intro">
+            <div className="img_container intro regras">
                 <img
                     src={imgIntro}
                     alt="Imagem de um computador com um código na tela"
@@ -15,30 +16,30 @@ const PaginaRegras = () => {
 
             <p>As Diretrizes de Acessibilidade para Conteúdo Web (WCAG) 2.0 possuem um grande conteúdo de recomendações, onde buscam fazer com que o conteúdo Web seja acessível para todos os usuários. Com a execução destas diretrizes, fará com que o conteúdo se torne acessível a um maior número de pessoas, entre elas, pessoas com cegueira e baixa visão, surdez e baixa audição, dificuldades de aprendizagem, limitações cognitivas, limitações de movimentos, incapacidade de fala, fotossensibilidade bem como as que tenham uma combinação destas limitações. Seguir estas diretrizes fará também com que o conteúdo Web se torne mais aproveitáveis aos usuários em geral.</p>
 
-            <ul>
-                <li>
-                    <h3>PRECEPTÍVEL</h3>
+            <ul className="row">
+                <CardRegras>
+                    <h3>Preceptível</h3>
 
                     <p>As informações e os componentes da interface do usuário devem ser apresentados em formas que possam ser percebidas pelo usuário.</p>
-                </li>
+                </CardRegras>
 
-                <li>
-                    <h3>OPERÁVEL</h3>
+                <CardRegras>
+                    <h3>Operável</h3>
 
                     <p>Os componentes de interface de usuário e a navegação devem ser operáveis, por exemplo: todas as funcionalidades da página estão disponíveis via teclado.</p>
-                </li>
+                </CardRegras>
 
-                <li>
-                    <h3>COMPREENSÍVEL</h3>
+                <CardRegras>
+                    <h3>Compreensível</h3>
 
                     <p>A informação e a operação da interface de usuário devem ser compreensíveis para isso deve-se utilizar linguagem clara e simples nos conteúdos e mecanismos de navegação entre as páginas.</p>
-                </li>
+                </CardRegras>
 
-                <li>
-                    <h3>ROBUSTO</h3>
+                <CardRegras>
+                    <h3>Robusto</h3>
 
                     <p>O conteúdo deve ser robusto o suficiente para poder ser interpretado de forma concisa por diversos agentes do usuário, incluindo recursos de tecnologia assistida, os usuários dever ser capazes de de acessar o conteúdo conforme a tecnologia avança.</p>
-                </li>
+                </CardRegras>
             </ul>
 
             <h2 className="titulo_sessao">WAI-ARIA</h2>
