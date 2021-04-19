@@ -1,0 +1,39 @@
+.opcaoTema {
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+}
+
+.opcaoTema label {
+    cursor: pointer;
+}
+
+.opcaoTema label::before {
+    content: '';
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 0.5rem;
+    border-radius: 6px;
+    box-shadow: 0 0 0 2px var(--corBg), 0 0 0 3px #CCC;
+    display: block;
+    transition: box-shadow 0.3s ease;
+}
+
+.opcaoTema.ativo label::before {
+    box-shadow: 0 0 0 2px #48BEFF, 0 0 0 3px currentColor;
+}
+
+.opcaoTema input {
+    display: none;
+}
+
+.opcaoTema.padrao label::before {
+    background-color: #309ADB;
+}
+
+.opcaoTema.roxo label::before {
+    background-color: #8E4DFF;
+}
+
+.opcaoTema.escuro label::before {
+    background-color: #06A;
+}

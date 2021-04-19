@@ -8,6 +8,10 @@ import Footer from './Componentes/Footer/Footer';
 const App = () => {
   const [menuAtivo, setMenuAtivo] = React.useState(false);
 
+  React.useEffect(() => {
+    document.body.classList.add(window.localStorage.getItem('tema') || '');
+  }, []);
+
   return (
     <>
       <MenuLateral ativo={menuAtivo} setAtivo={setMenuAtivo} />

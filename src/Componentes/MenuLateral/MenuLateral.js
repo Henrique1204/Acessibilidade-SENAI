@@ -3,17 +3,24 @@ import estilos from './MenuLateral.module.css';
 import Navegacao from '../Navegacao/Navegacao';
 import OpcoesAcessibilidade from '../OpcoesAcessibilidade/OpcoesAcessibilidade';
 import Icone from '../Util/Icone';
-import { useLocation } from 'react-router';
 import ModalContainer from '../ModalContainer/ModalContainer';
+import ModalCores from '../ModalCores/ModalCores';
+import { useLocation } from 'react-router';
 
 const MenuLateral = ({ ativo, setAtivo }) => {
     const [modalAtalhos, setModalAtalhos] = React.useState(null);
+    const [modalCores, setModalCores] = React.useState(false);
     const { pathname } = useLocation();
 
-    const menuToggle = () => setAtivo((ativo) => !ativo);
+    const menuToggle = React.useCallback(() => setAtivo((ativo) => !ativo), [setAtivo]);
 
     const fecharModalAtalhos = (valor) => {
         setModalAtalhos(valor);
+        window.sessionStorage.setItem('visualizado', 'true');
+    };
+
+    const fecharModalCores = (valor) => {
+        setModalCores(valor);
         window.sessionStorage.setItem('visualizado', 'true');
     };
 
@@ -29,11 +36,19 @@ const MenuLateral = ({ ativo, setAtivo }) => {
 
     React.useEffect(() => {
         window.addEventListener('keydown', ({ key, altKey }) => {
-            if (altKey && key === 'm') setAtivo(true);
-            if (key === 'Escape') setAtivo(false);
-            if (altKey && key === 't') setModalAtalhos(true);
+            if (altKey && key === 'm') menuToggle();
+
+            if (altKey && key === 'a') {
+                setModalCores(false);
+                setModalAtalhos(true);
+            }
+
+            if (altKey && key === 't') {
+                setModalAtalhos(false);
+                setModalCores(true);
+            }
         });
-    }, [setAtivo]);
+    }, [menuToggle]);
 
     return (
         <>
@@ -57,6 +72,7 @@ const MenuLateral = ({ ativo, setAtivo }) => {
                                 <h1>Opções de acessibilidades</h1>
                                 <OpcoesAcessibilidade
                                     cliqueNoAtalho={() => setModalAtalhos(true)}
+                                    cliqueNoCores={() => setModalCores(true)}
                                 />
                             </div>
                         </>
@@ -71,7 +87,7 @@ const MenuLateral = ({ ativo, setAtivo }) => {
 
             { modalAtalhos && (
                 <ModalContainer setAtivo={fecharModalAtalhos} classe={estilos.ModalAtalho}>
-                    <h1>Atalhos para teclado</h1>
+                    <h2>Atalhos para teclado</h2>
     
                     <ul>
                         <li><span>ESC</span> Fecha menu lateral/ modais.</li>
@@ -83,6 +99,8 @@ const MenuLateral = ({ ativo, setAtivo }) => {
                     </ul>
                 </ModalContainer>
             ) }
+
+            { modalCores && <ModalCores setAtivo={fecharModalCores} /> }
         </>
     );
 };
