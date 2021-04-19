@@ -9,11 +9,11 @@ const ModalAtalhos = ({ setAtivo }) => {
 
             <ul>
                 <li><span>ESC</span> Fecha modais.</li>
-                <li><span>Alt + M</span> Abre ou fecha o menu lateral.</li>
-                <li><span>Alt + T</span> Abre o modal de temas.</li>
-                <li><span>Alt + A</span> Abre o modal de atalhos.</li>
-                <li><span>+</span> Aumenta a fonte do site.</li>
-                <li><span>-</span> Diminui a fonte do site.</li>
+                <li><span>ALT e M</span> Abre ou fecha o menu lateral.</li>
+                <li><span>ALT e T</span> Abre o modal de temas.</li>
+                <li><span>ALT e A</span> Abre o modal de atalhos.</li>
+                <li><span>CTRL e +</span> Aumenta o zoom site.</li>
+                <li><span>CTRL e -</span> Diminui o zoom do site.</li>
             </ul>
         </ModalContainer>
     );

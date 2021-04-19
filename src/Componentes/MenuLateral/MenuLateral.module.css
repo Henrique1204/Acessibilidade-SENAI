@@ -34,8 +34,11 @@
     white-space: nowrap;
     background-color: var(--corBg);
     position: fixed;
+    top: 0;
+    bottom: 0;
     z-index: 1;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .MenuLateral.fechado {
@@ -183,10 +186,5 @@
         left: auto;
         right: 1rem;
         bottom: auto;
-    }
-
-    .ModalAtalho span {
-        font-size: 1rem;
-        margin-right: 0.5rem;
     }
 }
