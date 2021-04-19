@@ -7,7 +7,7 @@ const Dicas = () => {
     return (
         <section className="container">
             {/* Intro */}
-            <div className="img_container">
+            <div className="img_container intro">
                 <img
                     src={imgIntro}
                     alt="Celular sob a mesa ao lado de um ícone de acessibilidade"
