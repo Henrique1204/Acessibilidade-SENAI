@@ -1,0 +1,37 @@
+.Modal {
+    max-width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.Modal h2 {
+    width: 100%;
+    margin: 1rem auto 2rem;
+    text-align: center;
+    text-transform: capitalize;
+    color: var(--corPrincipal);
+}
+
+.Modal .opcaoTema {
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+}
+
+.Modal .opcaoTema label::before {
+    content: '';
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 0.5rem;
+    border-radius: 6px;
+    box-shadow: 0 0 0 2px var(--corBg), 0 0 0 3px #CCC;
+    display: block;
+}
+
+.Modal .opcaoTema.ativo label::before {
+    box-shadow: 0 0 0 2px #48BEFF, 0 0 0 3px #CCC;
+}
+
+.Modal .opcaoTema input {
+    display: none;
+}

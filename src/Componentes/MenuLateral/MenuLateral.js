@@ -3,17 +3,24 @@ import estilos from './MenuLateral.module.css';
 import Navegacao from '../Navegacao/Navegacao';
 import OpcoesAcessibilidade from '../OpcoesAcessibilidade/OpcoesAcessibilidade';
 import Icone from '../Util/Icone';
-import { useLocation } from 'react-router';
 import ModalContainer from '../ModalContainer/ModalContainer';
+import ModalCores from '../ModalCores/ModalCores';
+import { useLocation } from 'react-router';
 
 const MenuLateral = ({ ativo, setAtivo }) => {
     const [modalAtalhos, setModalAtalhos] = React.useState(null);
+    const [modalCores, setModalCores] = React.useState(false);
     const { pathname } = useLocation();
 
     const menuToggle = () => setAtivo((ativo) => !ativo);
 
     const fecharModalAtalhos = (valor) => {
         setModalAtalhos(valor);
+        window.sessionStorage.setItem('visualizado', 'true');
+    };
+
+    const fecharModalCores = (valor) => {
+        setModalCores(valor);
         window.sessionStorage.setItem('visualizado', 'true');
     };
 
@@ -71,7 +78,7 @@ const MenuLateral = ({ ativo, setAtivo }) => {
 
             { modalAtalhos && (
                 <ModalContainer setAtivo={fecharModalAtalhos} classe={estilos.ModalAtalho}>
-                    <h1>Atalhos para teclado</h1>
+                    <h2>Atalhos para teclado</h2>
     
                     <ul>
                         <li><span>ESC</span> Fecha menu lateral/ modais.</li>
@@ -83,6 +90,8 @@ const MenuLateral = ({ ativo, setAtivo }) => {
                     </ul>
                 </ModalContainer>
             ) }
+
+            { true && <ModalCores setAtivo={fecharModalCores} /> }
         </>
     );
 };
