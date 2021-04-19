@@ -3,6 +3,10 @@
     margin-right: 0.75rem;
 }
 
+.opcaoTema label {
+    cursor: pointer;
+}
+
 .opcaoTema label::before {
     content: '';
     width: 40px;

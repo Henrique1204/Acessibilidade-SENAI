@@ -12,7 +12,7 @@ const MenuLateral = ({ ativo, setAtivo }) => {
     const [modalCores, setModalCores] = React.useState(false);
     const { pathname } = useLocation();
 
-    const menuToggle = () => setAtivo((ativo) => !ativo);
+    const menuToggle = React.useCallback(() => setAtivo((ativo) => !ativo), [setAtivo]);
 
     const fecharModalAtalhos = (valor) => {
         setModalAtalhos(valor);
@@ -36,11 +36,19 @@ const MenuLateral = ({ ativo, setAtivo }) => {
 
     React.useEffect(() => {
         window.addEventListener('keydown', ({ key, altKey }) => {
-            if (altKey && key === 'm') setAtivo(true);
-            if (key === 'Escape') setAtivo(false);
-            if (altKey && key === 't') setModalAtalhos(true);
+            if (altKey && key === 'm') menuToggle();
+
+            if (altKey && key === 'a') {
+                setModalCores(false);
+                setModalAtalhos(true);
+            }
+
+            if (altKey && key === 't') {
+                setModalAtalhos(false);
+                setModalCores(true);
+            }
         });
-    }, [setAtivo]);
+    }, [menuToggle]);
 
     return (
         <>
