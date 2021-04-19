@@ -10,7 +10,7 @@ const OpcaoTema = ({ valorAtivo, opcao, label, setValor, cor }) => {
                 ${estilos[cor]}`
             }
         >
-            <label htmlFor={opcao}>{label}</label>
+            <label htmlFor={opcao} tabindex="0">{label}</label>
             <input
                 type="radio"
                 name={opcao}

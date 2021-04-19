@@ -3,8 +3,8 @@ import estilos from './MenuLateral.module.css';
 import Navegacao from '../Navegacao/Navegacao';
 import OpcoesAcessibilidade from '../OpcoesAcessibilidade/OpcoesAcessibilidade';
 import Icone from '../Util/Icone';
-import ModalContainer from '../ModalContainer/ModalContainer';
 import ModalCores from '../ModalCores/ModalCores';
+import ModalAtalhos from '../ModalAtalhos/ModalAtalhos';
 import { useLocation } from 'react-router';
 
 const MenuLateral = ({ ativo, setAtivo }) => {
@@ -85,20 +85,7 @@ const MenuLateral = ({ ativo, setAtivo }) => {
                     ) }
             </aside>
 
-            { modalAtalhos && (
-                <ModalContainer setAtivo={fecharModalAtalhos} classe={estilos.ModalAtalho}>
-                    <h2>Atalhos para teclado</h2>
-    
-                    <ul>
-                        <li><span>ESC</span> Fecha menu lateral/ modais.</li>
-                        <li><span>Alt + M</span> Abre o menu lateral.</li>
-                        <li><span>Alt + T</span> Abre o modal de temas.</li>
-                        <li><span>Alt + A</span> Abre o modal de atalhos.</li>
-                        <li><span>+</span> Aumenta a fonte do site.</li>
-                        <li><span>-</span> Diminui a fonte do site.</li>
-                    </ul>
-                </ModalContainer>
-            ) }
+            { modalAtalhos && <ModalAtalhos setAtivo={fecharModalAtalhos} /> }
 
             { modalCores && <ModalCores setAtivo={fecharModalCores} /> }
         </>
