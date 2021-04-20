@@ -5,7 +5,7 @@ const PaginaTestes = () => {
     return (
         <section className="container">
             {/* Intro */}
-            <div className="img_container">
+            <div className="img_container intro">
                 <img
                     src={imgIntro}
                     alt="Imagem contendo vários exemplos de acessibilidade"

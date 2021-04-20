@@ -55,7 +55,10 @@ const MenuLateral = ({ ativo, setAtivo }) => {
             <aside
                 className={`${estilos.MenuLateral} ${(ativo) ? estilos.aberto : estilos.fechado}`}
             >
-                    <button className={estilos.hamburguer} onClick={menuToggle}>
+                    <button
+                        className={estilos.hamburguer}
+                        onClick={menuToggle}
+                    >
                         <span></span>
                         <span></span>
                         <span></span>

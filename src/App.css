@@ -78,6 +78,19 @@ img {
   overflow: hidden;
 }
 
+.img_container.intro {
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.img_container.regras {
+  max-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Estilos Gerais*/
 main {
   min-height: calc(100vh - 221px);
@@ -114,9 +127,17 @@ main p {
   position: relative;
 }
 
-.container > * {
+.container > *, .row > * {
   margin-left: 15px;
   margin-right: 15px;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  margin-left: -15px;
+  margin-right: -15px;
+  flex-wrap: wrap;
 }
 
 .metade {
@@ -190,6 +211,11 @@ main p {
   .container > * {
     margin-left: 10px;
     margin-right: 10px;
+  }
+
+  .row {
+    margin-left: -10px;
+    margin-right: -10px;
   }
 }
 
