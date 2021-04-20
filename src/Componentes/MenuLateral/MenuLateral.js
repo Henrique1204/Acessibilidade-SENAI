@@ -58,6 +58,7 @@ const MenuLateral = ({ ativo, setAtivo }) => {
                     <button
                         className={estilos.hamburguer}
                         onClick={menuToggle}
+                        aria-label="Abre o menu de navegação e configuração"
                     >
                         <span></span>
                         <span></span>
@@ -67,7 +68,7 @@ const MenuLateral = ({ ativo, setAtivo }) => {
                     { ativo && (
                         <>
                             <div>
-                                <h2>Páginas do site</h2>
+                                <h3>Páginas do site</h3>
                                 <Navegacao />
                             </div>
 
@@ -82,7 +83,7 @@ const MenuLateral = ({ ativo, setAtivo }) => {
                     ) }
 
                     { !ativo  && (
-                        <button className={estilos.icone} onClick={menuToggle}>
+                        <button className={estilos.icone} onClick={menuToggle} aria-label="Abre o menu de navegação e configuração">
                             <Icone tipo="fa" nome="cog" />
                         </button>
                     ) }
