@@ -1,5 +1,6 @@
 import React from 'react';
 import imgIntro from '../Assets/intro_wcag.jpg'
+import imgAria from '../Assets/exemplo_aria.jpg'
 import CardRegras from '../Componentes/CardRegras/CardRegras';
 
 const PaginaRegras = () => {
@@ -49,6 +50,10 @@ const PaginaRegras = () => {
             <p>Em um website simples com o conteúdo estático, o acesso à informação é feito normalmente começando a leitura no topo da página e percorrendo toda a informação até ao final da página. Num website mais avançado ou em um aplicativo web, eventualmente são usadas tecnologias que fazem com que apareça informação na página sem que a mesma seja carregada. Em termos de acessibilidade, por exemplo para uma pessoa com deficiencia visual, torna-se complicado perceber que abriu uma janela modal ou que apareceu uma mensagem de sucesso ou de erro no meio da página.</p>
 
             <p className="metade">Com isso, foram criadas as especificações ARIA, que tem o objetivo de adicionar algum significado semântico a estes elementos, dar-lhes foco na interface quando eles aparecem na página. Por exemplo, um utilizador que esteja a navegar com um screen-reader pode receber avisos do aparecimento de janelas modais ou de mensagens importantes na página, podendo assim executar ações sobre elas.</p>
+
+            <div className="img_container metade">
+                <img src={imgAria} alt="Exemplo de WAI-Aria em um menu hamburguer"/>
+            </div>
         </section>
     );
 };
