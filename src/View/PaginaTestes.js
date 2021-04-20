@@ -1,16 +1,15 @@
 import React from 'react';
+import ImagemIntro from '../Componentes/ImagemIntro/ImagemIntro';
 import imgIntro from '../Assets/intro_testes.png';
 
 const PaginaTestes = () => {
     return (
         <section className="container">
             {/* Intro */}
-            <div className="img_container intro">
-                <img
-                    src={imgIntro}
-                    alt="Imagem contendo vários exemplos de acessibilidade"
-                />
-            </div>
+            <ImagemIntro
+                src={imgIntro}
+                alt="Imagem contendo vários exemplos de acessibilidade"
+            />
 
             {/* Conteúdo dos testes automatizados */}
             <h2 className="titulo_sessao">Testes automatizados</h2>

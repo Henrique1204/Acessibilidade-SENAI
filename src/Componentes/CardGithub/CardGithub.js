@@ -5,6 +5,7 @@ import Icone from '../Util/Icone'
 const CardGithub = ({ usuario }) => {
     const [dados, setDados] = React.useState(null);
     const [loading, setLoading] = React.useState(null);
+    const [ carregandoImg, setCarregandoImg] = React.useState(true);
 
     React.useEffect(() => {
         const fetchDados = async () => {
@@ -36,16 +37,26 @@ const CardGithub = ({ usuario }) => {
     if (loading) {
         return (
             <div className={`${estilos.Card} ${estilos.loading}` }>
-                <div></div>
+                <div className={estilos.efeito}></div>
             </div>
         );
     }
 
     if (dados) {
         return (
-            <div className={`${estilos.Card} ${estilos.conteudo}`}>
-                <div className="img_container">
-                    <img src={dados.foto} alt={`Foto do desenvolvedor ${dados.nome}`}/>
+            <div
+                className={`
+                    ${estilos.Card} 
+                    ${estilos.conteudo} 
+                    ${(carregandoImg) ? estilos.carregando : ''}
+                `}
+            >
+                <div className={`img_container ${estilos.efeito}`}>
+                    <img
+                        onLoad={() => setCarregandoImg(false)}
+                        src={dados.foto} alt={`Foto do desenvolvedor
+                        ${dados.nome}`}
+                    />
                 </div>
 
                 <h2>{dados.nome}</h2>

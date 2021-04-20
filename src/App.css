@@ -74,21 +74,9 @@ img {
 }
 
 .img_container {
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-.img_container.intro {
   width: 100%;
   border-radius: 4px;
   overflow: hidden;
-}
-
-.img_container.regras {
-  max-height: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 /* Estilos Gerais*/

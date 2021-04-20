@@ -1,17 +1,16 @@
 import React from 'react';
+import ImagemIntro from '../Componentes/ImagemIntro/ImagemIntro';
+import CardRegras from '../Componentes/CardRegras/CardRegras';
 import imgIntro from '../Assets/intro_wcag.jpg'
 import imgAria from '../Assets/exemplo_aria.jpg'
-import CardRegras from '../Componentes/CardRegras/CardRegras';
 
 const PaginaRegras = () => {
     return (
         <section className="container">
-            <div className="img_container intro regras">
-                <img
-                    src={imgIntro}
-                    alt="Imagem de um computador com um código na tela"
-                />
-            </div>
+            <ImagemIntro
+                src={imgIntro}
+                alt="Imagem de um computador com um código na tela"
+            />
 
             <h2 className="titulo_sessao">WCAG 2.0</h2>
 
