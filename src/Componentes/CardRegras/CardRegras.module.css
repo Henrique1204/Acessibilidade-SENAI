@@ -16,4 +16,12 @@
 
 .Card p {
     margin-top: 1.5rem;
+    font-size: 1rem;
+}
+
+@media (max-width: 990px) {
+    .Card {
+        padding: 1rem;
+        width: 100%;
+    }
 }
