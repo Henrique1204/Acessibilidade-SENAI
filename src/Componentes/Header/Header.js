@@ -48,7 +48,7 @@ const Header = () => {
     return (
         <header className={estilos.Header}>
             <div className="container">
-                <h3>Página {localizacao}</h3>
+                <span>Página {localizacao}</span>
                 <h1>{introducao}</h1>
             </div>
         </header>

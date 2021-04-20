@@ -24,7 +24,7 @@ const ModalContainer = ({ setAtivo, children, classe }) => {
     return (
       <section className={estilos.Modal} onClick={fecharModal} ref={fundoRef}>
         <div className={`${estilos.CardModal} ${(classe) ? classe : ''}`}>
-          <button className={estilos.ModalFechar} onClick={() => setAtivo(false)}>
+          <button className={estilos.ModalFechar} onClick={() => setAtivo(false)} aria-label="Abre o menu de navegação e configuração">
             <Icone tipo="fa" nome="times" />
           </button>
 

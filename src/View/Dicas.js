@@ -65,7 +65,7 @@ const Dicas = () => {
             <p>Outras funcionalidades mais complexas, não podem ser resolvidas somente com um código organizado. Para esses casos, podemos nos apoiar no WAI-ARIA (Web Accessibility Initiative – Accessible Rich Internet Applications), uma especificação técnica que permite aumentar a acessibilidade de uma página, ou conteúdo dinâmico.</p>
 
             {/* Conteúdo das boas práticas */}
-            <h1 className="titulo_sessao">Boas práticas de Design</h1>
+            <h2 className="titulo_sessao">Boas práticas de Design</h2>
 
             <ul className="lista">
                 <li>O tamanho das fontes deve facilitar a leitura.</li>
