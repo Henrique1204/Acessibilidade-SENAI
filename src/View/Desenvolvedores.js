@@ -1,9 +1,15 @@
 import React from 'react';
 import CardGithub from '../Componentes/CardGithub/CardGithub';
+import Head from '../Componentes/Util/Head';
 
 const Desenvolvedores = () => {
     return (
         <section className="container">
+            <Head
+                title="Desenvolvedores"
+                description="Página dos desenvolvedores do site."
+            />
+
             <CardGithub usuario="gkslima" />
             <CardGithub usuario="JoseCarlos69" />
             <CardGithub usuario="agatha-juh" />

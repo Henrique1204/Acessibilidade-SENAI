@@ -2,12 +2,18 @@ import React from 'react';
 import ImagemIntro from '../Componentes/ImagemIntro/ImagemIntro';
 import LinkExterno from '../Componentes/LinkExterno/LinkExterno';
 import CardRegras from '../Componentes/CardRegras/CardRegras';
+import Head from '../Componentes/Util/Head';
 import imgIntro from '../Assets/intro_wcag.jpg'
 import imgAria from '../Assets/exemplo_aria.jpg'
 
 const PaginaRegras = () => {
     return (
         <section className="container">
+            <Head
+                title="WCAG 2.0"
+                description="Conheça as principais diretrizes e regras para garantir um conteúdo acessível."
+            />
+
             <ImagemIntro
                 src={imgIntro}
                 alt="Imagem de um computador com um código na tela"
