@@ -58,7 +58,7 @@ const MenuLateral = ({ ativo, setAtivo }) => {
                     <button
                         className={estilos.hamburguer}
                         onClick={menuToggle}
-                        aria-label="Abre o menu de navegação e configuração"
+                        aria-label={`${(ativo) ? 'Fecha' : 'Abre'} o menu de navegação e o painel de acessibilidade`}
                     >
                         <span></span>
                         <span></span>

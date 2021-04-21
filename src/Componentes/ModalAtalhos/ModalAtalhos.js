@@ -8,12 +8,12 @@ const ModalAtalhos = ({ setAtivo }) => {
             <h2>Atalhos para teclado</h2>
 
             <ul>
-                <li><span aria-hidden="true">ESC</span> Fecha modais.</li>
-                <li><span aria-hidden="true">ALT e M</span> Abre/fecha o menu.</li>
-                <li><span aria-hidden="true">ALT e T</span> Abre o modal de temas.</li>
-                <li><span aria-hidden="true">ALT e A</span> Abre o modal de atalhos.</li>
-                <li><span aria-hidden="true">CTRL e +</span> Aumenta o zoom do site.</li>
-                <li><span aria-hidden="true">CTRL e -</span> Diminui o zoom do site.</li>
+                <li><span>ESC</span> Fecha modais.</li>
+                <li><span>ALT e M</span> Abre/fecha o menu.</li>
+                <li><span>ALT e T</span> Abre o modal de temas.</li>
+                <li><span>ALT e A</span> Abre o modal de atalhos.</li>
+                <li><span>CTRL e +</span> Aumenta o zoom do site.</li>
+                <li><span>CTRL e -</span> Diminui o zoom do site.</li>
             </ul>
         </ModalContainer>
     );
