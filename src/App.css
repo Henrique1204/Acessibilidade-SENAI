@@ -56,6 +56,7 @@ textarea {
 
 p {
   font-size: 1.125rem;
+  letter-spacing: 1px;
 }
 
 a {
@@ -74,6 +75,7 @@ img {
 }
 
 .img_container {
+  width: 100%;
   border-radius: 4px;
   overflow: hidden;
 }
@@ -114,9 +116,18 @@ main p {
   position: relative;
 }
 
-.container > * {
+.container > *,
+.row > * {
   margin-left: 15px;
   margin-right: 15px;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  margin-left: 0;
+  margin-right: 0;
+  flex-wrap: wrap;
 }
 
 .metade {
@@ -174,6 +185,16 @@ main p {
   transform: scale(1.05);
 }
 
+.linkExterno {
+  margin-left: 0.2rem;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.linkExterno:hover, .linkExterno:focus {
+  color: var(--corPrincipal);
+}
+
 @media (max-width: 990px) {
   main {
     min-height: calc(100vh - 201px);
@@ -187,9 +208,15 @@ main p {
     max-width: 700px;
   }
 
-  .container > * {
+  .container > *,
+  .row > * {
     margin-left: 10px;
     margin-right: 10px;
+  }
+
+  .row {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -211,8 +238,14 @@ main p {
     max-width: 400px;
   }
 
-  .container > * {
+  .container > *,
+  .row > * {
     margin-left: 10px;
     margin-right: 10px;
+  }
+
+  .row {
+    margin-left: 0;
+    margin-right: 0;
   }
 }

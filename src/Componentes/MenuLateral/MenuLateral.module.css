@@ -1,190 +1,196 @@
 @keyframes crescer {
-    from {
-        max-width: 80px;
-    }
-    to {
-        max-width: 222px;
-    }
+  from {
+    max-width: 80px;
+  }
+  to {
+    max-width: 222px;
+  }
 }
 
 @keyframes encolher {
-    from {
-        max-width: 222px;
-    }
-    to {
-        max-width: 80px;
-    }
+  from {
+    max-width: 222px;
+  }
+  to {
+    max-width: 80px;
+  }
 }
 
 @keyframes aparecer {
-    from {
-        opacity: 0;
-        transform: translateX(-30px);
-    } to {
-        opacity: 1;
-        transform: initial;
-    }
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: initial;
+  }
 }
 
 .MenuLateral {
-    width: 100%;
-    max-width: 80px;
-    min-height: 100vh;
-    padding: 1rem;
-    white-space: nowrap;
-    background-color: var(--corBg);
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    z-index: 1;
-    overflow-x: hidden;
-    overflow-y: auto;
+  width: 100%;
+  max-width: 80px;
+  min-height: 100vh;
+  padding: 1rem;
+  white-space: nowrap;
+  background-color: var(--corBg);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .MenuLateral.fechado {
-    animation: encolher 0.3s forwards;
+  animation: encolher 0.3s forwards;
 }
 
 .MenuLateral.aberto {
-    animation: crescer 0.3s forwards;
+  animation: crescer 0.3s forwards;
 }
 
 .MenuLateral .hamburguer {
-    width: 48px;
-    height: 48px;
-    padding: 0.5rem;
-    border: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-    position: relative;
-    cursor: pointer;
-    outline: none;
-    overflow: hidden;
+  width: 48px;
+  height: 48px;
+  padding: 0.5rem;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
 }
 
 .MenuLateral .hamburguer span {
-    width: 2rem;
-    height: 2px;
-    display: block;
-    background-color: currentColor;
-    transition: 0.4s ease;
+  width: 2rem;
+  height: 2px;
+  display: block;
+  background-color: currentColor;
+  transition: 0.4s ease;
 }
 
 .MenuLateral .hamburguer span + span {
-    margin-top: 6px;
+  margin-top: 6px;
 }
 
-.MenuLateral .hamburguer span:nth-child(1), .MenuLateral .hamburguer span:nth-child(3) {
-    margin-left: -0.5rem;
+.MenuLateral .hamburguer span:nth-child(1),
+.MenuLateral .hamburguer span:nth-child(3) {
+  margin-left: -0.5rem;
 }
 
 .MenuLateral .hamburguer span:nth-child(2) {
-    margin-left: 0.5rem;
+  margin-left: 0.5rem;
 }
 
-.MenuLateral .hamburguer:hover span, .MenuLateral .hamburguer:focus span {
-    margin-left: 0;
-    background-color: var(--corPrincipal);
+.MenuLateral .hamburguer:hover span,
+.MenuLateral .hamburguer:focus span {
+  margin-left: 0;
+  background-color: var(--corPrincipal);
 }
 
 .MenuLateral.aberto .hamburguer span {
-    margin-left: 0;
+  margin-left: 0;
 }
 
 .MenuLateral.aberto .hamburguer span:nth-child(1) {
-    transform: rotate(45deg);
-    position: absolute;
-    top: 26px;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 26px;
 }
 
 .MenuLateral.aberto .hamburguer span:nth-child(2) {
-    transform: translateX(200%);
+  transform: translateX(200%);
 }
 
 .MenuLateral.aberto .hamburguer span:nth-child(3) {
-    transform: rotate(-45deg);
-    position: absolute;
+  transform: rotate(-45deg);
+  position: absolute;
 }
 
-.MenuLateral h1, .MenuLateral h2 {
-    font-size: 1rem;
-    font-weight: normal;
-    color: var(--corPrincipal);
+.MenuLateral h1,
+.MenuLateral h3 {
+  font-size: 1rem;
+  font-weight: normal;
+  color: var(--corPrincipal);
 }
 
 .MenuLateral div {
-    padding: 1rem 0;
-    animation: aparecer 0.4s forwards;
+  padding: 1rem 0;
+  animation: aparecer 0.4s forwards;
 }
 
 .MenuLateral .acessibilidade {
-    border-top: 1px solid var(--corPrincipal);
+  border-top: 1px solid var(--corPrincipal);
 }
 
 .MenuLateral .icone {
-    width: 100%;
-    border: none;
-    font-size: 2rem;
-    text-align: center;
-    background-color: transparent;
-    display: block;
-    position: absolute;
-    bottom: 1rem;
-    left: 0;
-    cursor: pointer;
-    outline: none;
-    transition: color 0.3s ease;
+  width: 100%;
+  border: none;
+  font-size: 2rem;
+  text-align: center;
+  background-color: transparent;
+  display: block;
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  cursor: pointer;
+  outline: none;
+  transition: color 0.3s ease;
 }
 
-.MenuLateral .icone:hover, .MenuLateral .icone:focus {
-    color: var(--corPrincipal);
+.MenuLateral .icone:hover,
+.MenuLateral .icone:focus {
+  color: var(--corPrincipal);
 }
 
 @media (max-width: 730px) {
-    @keyframes crescer {
-        from {
-            max-height: 80px;
-        }
-        to {
-            min-height: 100vh;
-        }
+  @keyframes crescer {
+    from {
+      max-height: 80px;
     }
-    
-    @keyframes encolher {
-        from {
-            min-height: 100vh;
-        }
-        to {
-            max-height: 80px;
-        }
+    to {
+      min-height: 100vh;
     }
-    
-    @keyframes aparecer {
-        from {
-            opacity: 0;
-            transform: translateY(-30px);
-        } to {
-            opacity: 1;
-            transform: initial;
-        }
-    }
+  }
 
-    .MenuLateral {
-        max-width: 100%;
-        min-height: 0;
-        text-align: center;
-        top: 0;
-        z-index: 1;
+  @keyframes encolher {
+    from {
+      min-height: 100vh;
     }
+    to {
+      max-height: 80px;
+    }
+  }
 
-    .MenuLateral .icone {
-        width: auto;
-        top: 1.5rem;
-        left: auto;
-        right: 1rem;
-        bottom: auto;
+  @keyframes aparecer {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
     }
+    to {
+      opacity: 1;
+      transform: initial;
+    }
+  }
+
+  .MenuLateral {
+    max-width: 100%;
+    min-height: 0;
+    text-align: center;
+    top: 0;
+    z-index: 1;
+  }
+
+  .MenuLateral .icone {
+    width: auto;
+    top: 1.5rem;
+    left: auto;
+    right: 1rem;
+    bottom: auto;
+  }
 }

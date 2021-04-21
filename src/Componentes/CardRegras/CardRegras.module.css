@@ -1,0 +1,27 @@
+.Card {
+    width: calc(50% - 30px);
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-radius: 6px;
+    text-align: center;
+    background-color: var(--corBg);
+    box-shadow: 2px 2px 6px rgba(34, 34, 34, 0.2);
+}
+
+.Card h3 {
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    color: var(--corPrincipal);
+}
+
+.Card p {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+}
+
+@media (max-width: 990px) {
+    .Card {
+        padding: 1rem;
+        width: 100%;
+    }
+}

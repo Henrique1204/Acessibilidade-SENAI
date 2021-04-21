@@ -18,6 +18,7 @@ const OpcaoTema = ({ valorAtivo, opcao, label, setValor, cor }) => {
                 value={opcao}
                 checked={valorAtivo === opcao}
                 onChange={({ target }) => setValor(target.value)}
+                aria-label={`Muda a cor para o tema ${label}`}
             />
         </div>
     );

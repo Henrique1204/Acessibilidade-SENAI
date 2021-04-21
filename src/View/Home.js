@@ -1,4 +1,5 @@
 import React from 'react';
+import ImagemIntro from '../Componentes/ImagemIntro/ImagemIntro';
 import imgTemaAzul from '../Assets/home_temaAzul.jpg';
 import imgTemaRoxo from '../Assets/home_temaRoxo.jpg';
 import imgTemaEscuro from '../Assets/home_temaEscuro.jpg';
@@ -19,12 +20,12 @@ const Home = ({ opcaoTema }) => {
     }, [opcaoTema]);
     return (
         <section className="container">
-            <div className="img_container">
-                <img
+            { temaImg && (
+                <ImagemIntro
                     src={temaImg}
-                    alt=""
+                    alt="Ilustrações que representam as deficiências"
                 />
-            </div>
+            ) }
 
             <p>Acessibilidade é a garantia de que, qualquer pessoa possa utilizar uma determinada aplicação sem nenhum tipo de impedimento. Isso significa, que não apenas o usuário “típico” conseguirá utilizar com satisfação a aplicação, mas também aqueles que vivenciam algum tipo de deficiência ou incapacidade que são classificadas em quatro grupos abrangentes: visual, motora, auditiva e cognitiva.</p>
 

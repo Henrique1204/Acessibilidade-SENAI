@@ -55,16 +55,20 @@ const MenuLateral = ({ ativo, setAtivo, opcaoTema, setOpcaoTema }) => {
             <aside
                 className={`${estilos.MenuLateral} ${(ativo) ? estilos.aberto : estilos.fechado}`}
             >
-                    <button className={estilos.hamburguer} onClick={menuToggle}>
-                        <span></span>
-                        <span></span>
-                        <span></span>
+                    <button
+                        className={estilos.hamburguer}
+                        onClick={menuToggle}
+                        aria-label={`${(ativo) ? 'Fecha' : 'Abre'} o menu de navegação e o painel de acessibilidade`}
+                    >
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
                     </button>
 
                     { ativo && (
                         <>
                             <div>
-                                <h2>Páginas do site</h2>
+                                <h3>Páginas do site</h3>
                                 <Navegacao />
                             </div>
 
@@ -79,7 +83,7 @@ const MenuLateral = ({ ativo, setAtivo, opcaoTema, setOpcaoTema }) => {
                     ) }
 
                     { !ativo  && (
-                        <button className={estilos.icone} onClick={menuToggle}>
+                        <button className={estilos.icone} onClick={menuToggle} aria-label="Abre o menu de navegação e configuração">
                             <Icone tipo="fa" nome="cog" />
                         </button>
                     ) }

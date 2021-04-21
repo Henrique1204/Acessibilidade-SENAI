@@ -13,7 +13,6 @@ const App = () => {
     if (temaSalvo) document.body.classList.add(temaSalvo);
   }, []);
 
-  // Alteração de temas
   const [opcaoTema, setOpcaoTema] = React.useState(window.localStorage.getItem('tema') || '');
 
   return (

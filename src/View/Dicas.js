@@ -1,4 +1,5 @@
 import React from 'react';
+import ImagemIntro from '../Componentes/ImagemIntro/ImagemIntro';
 import imgIntro from '../Assets/intro_dicas.jpg';
 import imgTitulos from '../Assets/exemplo_titulos.jpg';
 import imgAtributos from '../Assets/exemplo_atributos_descontinuados.jpg';
@@ -7,12 +8,10 @@ const Dicas = () => {
     return (
         <section className="container">
             {/* Intro */}
-            <div className="img_container">
-                <img
-                    src={imgIntro}
-                    alt="Celular sob a mesa ao lado de um ícone de acessibilidade"
-                />
-            </div>
+            <ImagemIntro
+                src={imgIntro}
+                alt="Celular sob a mesa ao lado de um ícone de acessibilidade"
+            />
 
             <p>Códigos mais simples, limpos e com uma semântica adequada costumam ser o melhor caminho para desenvolver um site acessível. No entanto, ainda temos alguns pontos que precisam de atenção, mesmo com um código ajeitado. Os validadores automáticos conseguem nos ajudar em alguns pontos importantes com algumas validações. Entre elas: </p>
 
@@ -66,7 +65,7 @@ const Dicas = () => {
             <p>Outras funcionalidades mais complexas, não podem ser resolvidas somente com um código organizado. Para esses casos, podemos nos apoiar no WAI-ARIA (Web Accessibility Initiative – Accessible Rich Internet Applications), uma especificação técnica que permite aumentar a acessibilidade de uma página, ou conteúdo dinâmico.</p>
 
             {/* Conteúdo das boas práticas */}
-            <h1 className="titulo_sessao">Boas práticas de Design</h1>
+            <h2 className="titulo_sessao">Boas práticas de Design</h2>
 
             <ul className="lista">
                 <li>O tamanho das fontes deve facilitar a leitura.</li>
