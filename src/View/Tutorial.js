@@ -1,5 +1,6 @@
 import React from 'react';
 import ImagemIntro from '../Componentes/ImagemIntro/ImagemIntro';
+import LinkExterno from '../Componentes/LinkExterno/LinkExterno';
 import imgIntro from '../Assets/intro_dicas.jpg';
 import imgDevTools from '../Assets/exemplo_abrir_devtools.jpg';
 import imgGerarAnalise from '../Assets/exemplo_gerar_analise.jpg';
@@ -15,13 +16,7 @@ const Tutorial = () => {
             />
 
             <p>
-                Nesse tutorial você verá sobre a extensão Lighthouse, aprenderá como criar análises das suas interfaces e como consultar o que precisa ser melhorado. Para isso certifique-se de ter ela instalada no seu navegador, caso não tenha instalado,
-                <a
-                    href="https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=pt-BR"
-                    target="_blank"
-                    className="linkExterno"
-                    rel="noreferrer"
-                >clique aqui</a> para acessar a tela de instalação.
+                Nesse tutorial você verá sobre a extensão Lighthouse, aprenderá como criar análises das suas interfaces e como consultar o que precisa ser melhorado. Para isso certifique-se de ter ela instalada no seu navegador, caso não tenha instalado, <LinkExterno href="https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=pt-BR">Clique aqui</LinkExterno> para acessar a tela de instalação.
             </p>
 
             <h2 className="titulo_sessao">Passo 1 - Abrir o Lighthouse no navegador</h2>
