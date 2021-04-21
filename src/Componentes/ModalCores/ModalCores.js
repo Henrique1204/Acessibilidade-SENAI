@@ -3,9 +3,7 @@ import estilos from './ModalCores.module.css';
 import ModalContainer from '../ModalContainer/ModalContainer';
 import OpcaoTema from '../OpcaoTema/OpcaoTema';
 
-const ModalCores = ({ setAtivo }) => {
-    const [opcaoTema, setOpcaoTema] = React.useState(window.localStorage.getItem('tema') || '');
-
+const ModalCores = ({ setAtivo, opcaoTema, setOpcaoTema }) => {
     const limparTemas = React.useCallback(() => {
         window.localStorage.removeItem('tema');
         document.body.classList.remove('temaRoxo');
@@ -22,7 +20,6 @@ const ModalCores = ({ setAtivo }) => {
         if (opcaoTema && opcaoTema !== 'temaPadrao') definirTema(opcaoTema);
         else limparTemas();
     }, [opcaoTema, definirTema, limparTemas]);
-
     return (
         <ModalContainer setAtivo={setAtivo} classe={estilos.Modal}>
             <h2>Escolha seu Tema</h2>
