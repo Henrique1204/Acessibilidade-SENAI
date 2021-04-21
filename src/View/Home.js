@@ -3,6 +3,7 @@ import ImagemIntro from '../Componentes/ImagemIntro/ImagemIntro';
 import imgTemaAzul from '../Assets/home_temaAzul.jpg';
 import imgTemaRoxo from '../Assets/home_temaRoxo.jpg';
 import imgTemaEscuro from '../Assets/home_temaEscuro.jpg';
+import Head from '../Componentes/Util/Head';
 
 const Home = ({ opcaoTema }) => {
     const [temaImg, setTemaImg] = React.useState('');
@@ -20,6 +21,11 @@ const Home = ({ opcaoTema }) => {
     }, [opcaoTema]);
     return (
         <section className="container">
+            <Head
+                title="Introdução"
+                description="Saiba o por que de acessibilidade ser necessária para ter uma boa interface."
+            />
+
             { temaImg && (
                 <ImagemIntro
                     src={temaImg}

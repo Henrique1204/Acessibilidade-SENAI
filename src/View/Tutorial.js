@@ -6,10 +6,16 @@ import imgDevTools from '../Assets/exemplo_abrir_devtools.jpg';
 import imgGerarAnalise from '../Assets/exemplo_gerar_analise.jpg';
 import imgResultadoAnalise from '../Assets/exemplo_resultado_analise.jpg';
 import imgConclusao from '../Assets/conclusao.jpg';
+import Head from '../Componentes/Util/Head';
 
 const Tutorial = () => {
     return (
         <section className="container">
+            <Head
+                title="Tutorial"
+                description="Aprenda a dar os primeiros passos usando o Lighthouse."
+            />
+
             <ImagemIntro
                 src={imgIntro}
                 alt="Imagem de ilustração para tutoriais"

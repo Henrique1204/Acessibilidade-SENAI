@@ -1,11 +1,17 @@
 import React from 'react';
 import ImagemIntro from '../Componentes/ImagemIntro/ImagemIntro';
 import LinkExterno from '../Componentes/LinkExterno/LinkExterno';
+import Head from '../Componentes/Util/Head';
 import imgIntro from '../Assets/intro_testes.png';
 
 const PaginaTestes = () => {
     return (
         <section className="container">
+            <Head
+                title="Desenvolvedores"
+                description="Página dos desenvolvedores do site."
+            />
+
             <ImagemIntro
                 src={imgIntro}
                 alt="Imagem contendo vários exemplos de acessibilidade"
