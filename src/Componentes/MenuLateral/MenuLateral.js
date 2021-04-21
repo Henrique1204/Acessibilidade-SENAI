@@ -60,9 +60,9 @@ const MenuLateral = ({ ativo, setAtivo }) => {
                         onClick={menuToggle}
                         aria-label={`${(ativo) ? 'Fecha' : 'Abre'} o menu de navegação e o painel de acessibilidade`}
                     >
-                        <span></span>
-                        <span></span>
-                        <span></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
                     </button>
 
                     { ativo && (
