@@ -8,8 +8,9 @@ span {
 }
 
 span {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: normal;
+  letter-spacing: 1.5px;
   color: #888;
 }
 

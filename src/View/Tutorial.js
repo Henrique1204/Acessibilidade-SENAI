@@ -1,16 +1,32 @@
 import React from 'react';
 import ImagemIntro from '../Componentes/ImagemIntro/ImagemIntro';
 import imgIntro from '../Assets/intro_dicas.jpg';
+import imgTemaAzul from '../Assets/tutorial_temaAzul.png'
+import imgTemaRoxo from '../Assets/tutorial_temaRoxo.png'
+import imgTemaEscuro from '../Assets/tutorial_temaEscuro.png'
 import imgDevTools from '../Assets/exemplo_abrir_devtools.jpg';
 import imgGerarAnalise from '../Assets/exemplo_gerar_analise.jpg';
 import imgResultadoAnalise from '../Assets/exemplo_resultado_analise.jpg';
 import imgConclusao from '../Assets/conclusao.jpg';
 
-const Tutorial = () => {
+const Tutorial = ({ opcaoTema }) => {
+    const [temaImg, setTemaImg] = React.useState('');
+
+    React.useEffect(() => {
+        if (opcaoTema === 'temaRoxo') {
+            setTemaImg(imgTemaRoxo);
+        }
+        else if (opcaoTema === 'temaEscuro') {
+            setTemaImg(imgTemaEscuro);
+        }
+        else {
+            setTemaImg(imgTemaAzul);
+        };
+    }, [opcaoTema]);
     return (
         <section className="container">
             <ImagemIntro
-                src={imgIntro}
+                src={temaImg}
                 alt="Imagem de ilustração para tutoriais"
             />
 

@@ -1,14 +1,30 @@
 import React from 'react';
 import ImagemIntro from '../Componentes/ImagemIntro/ImagemIntro';
 import CardRegras from '../Componentes/CardRegras/CardRegras';
-import imgIntro from '../Assets/intro_wcag.jpg'
+import imgIntro from '../Assets/img_regras.jpg'
 import imgAria from '../Assets/exemplo_aria.jpg'
+import imgTemaAzul from '../Assets/regras_temaAzul.jpg';
+import imgTemaRoxo from '../Assets/regras_temaRoxo.jpg';
+import imgTemaEscuro from '../Assets/regras_temaEscuro.jpg';
 
-const PaginaRegras = () => {
+const PaginaRegras = ({ opcaoTema }) => {
+    const [temaImg, setTemaImg] = React.useState('');
+
+    React.useEffect(() => {
+        if (opcaoTema === 'temaRoxo') {
+            setTemaImg(imgTemaRoxo);
+        }
+        else if (opcaoTema === 'temaEscuro') {
+            setTemaImg(imgTemaEscuro);
+        }
+        else {
+            setTemaImg(imgTemaAzul);
+        };
+    }, [opcaoTema]);
     return (
         <section className="container">
             <ImagemIntro
-                src={imgIntro}
+                src={temaImg}
                 alt="Imagem de um computador com um código na tela"
             />
 
