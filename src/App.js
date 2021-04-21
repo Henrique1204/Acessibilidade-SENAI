@@ -13,13 +13,15 @@ const App = () => {
     if (temaSalvo) document.body.classList.add(temaSalvo);
   }, []);
 
+  const [opcaoTema, setOpcaoTema] = React.useState(window.localStorage.getItem('tema') || '');
+
   return (
     <>
-      <MenuLateral ativo={menuAtivo} setAtivo={setMenuAtivo} />
+      <MenuLateral ativo={menuAtivo} setAtivo={setMenuAtivo} opcaoTema={opcaoTema} setOpcaoTema={setOpcaoTema} />
     
       <div className={`conteudo ${(menuAtivo) ? 'menuAberto' : ''}`}>
         <Header />
-        <Rotas />
+        <Rotas opcaoTema={opcaoTema}/>
         <Footer />
       </div>
     </>

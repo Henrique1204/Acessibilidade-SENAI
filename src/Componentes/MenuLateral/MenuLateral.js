@@ -7,7 +7,7 @@ import ModalCores from '../ModalCores/ModalCores';
 import ModalAtalhos from '../ModalAtalhos/ModalAtalhos';
 import { useLocation } from 'react-router';
 
-const MenuLateral = ({ ativo, setAtivo }) => {
+const MenuLateral = ({ ativo, setAtivo, opcaoTema, setOpcaoTema }) => {
     const [modalAtalhos, setModalAtalhos] = React.useState(null);
     const [modalCores, setModalCores] = React.useState(false);
     const { pathname } = useLocation();
@@ -91,7 +91,7 @@ const MenuLateral = ({ ativo, setAtivo }) => {
 
             { modalAtalhos && <ModalAtalhos setAtivo={fecharModalAtalhos} /> }
 
-            { modalCores && <ModalCores setAtivo={fecharModalCores} /> }
+            { modalCores && <ModalCores setAtivo={fecharModalCores} opcaoTema={opcaoTema} setOpcaoTema={setOpcaoTema}/> }
         </>
     );
 };

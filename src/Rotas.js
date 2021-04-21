@@ -7,11 +7,11 @@ import Dicas from './View/Dicas';
 import Tutorial from './View/Tutorial';
 import Desenvolvedores from './View/Desenvolvedores';
 
-const Rotas = () => {
+const Rotas = ({ opcaoTema }) => {
     return (
         <main>
             <Routes>
-                <Route path="/" element={<Home />} />
+                <Route path="/" element={<Home opcaoTema={opcaoTema}/>} />
                 <Route path="/regras" element={<PaginaRegras />} />
                 <Route path="/testes" element={<PaginaTestes />} />
                 <Route path="/dicas" element={<Dicas />} />

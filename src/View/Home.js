@@ -1,25 +1,23 @@
 import React from 'react';
 import ImagemIntro from '../Componentes/ImagemIntro/ImagemIntro';
-import imgTemaAzul from '../Assets/home_temaAzul.png';
-import imgTemaRoxo from '../Assets/home_temaRoxo.png';
-import imgTemaEscuro from '../Assets/home_temaEscuro.png';
+import imgTemaAzul from '../Assets/home_temaAzul.jpg';
+import imgTemaRoxo from '../Assets/home_temaRoxo.jpg';
+import imgTemaEscuro from '../Assets/home_temaEscuro.jpg';
 
-const Home = () => {
-    const [temaImg, setTemaImg] = React.useState(null);
+const Home = ({ opcaoTema }) => {
+    const [temaImg, setTemaImg] = React.useState('');
 
     React.useEffect(() => {
-        const temaSalvo = window.localStorage.getItem('tema');
-        if (temaSalvo && temaSalvo === 'temaRoxo') {
+        if (opcaoTema === 'temaRoxo') {
             setTemaImg(imgTemaRoxo);
         }
-        else if (temaSalvo && temaSalvo === 'temaEscuro') {
+        else if (opcaoTema === 'temaEscuro') {
             setTemaImg(imgTemaEscuro);
         }
         else {
             setTemaImg(imgTemaAzul);
         };
-    }, []);
-
+    }, [opcaoTema]);
     return (
         <section className="container">
             { temaImg && (
