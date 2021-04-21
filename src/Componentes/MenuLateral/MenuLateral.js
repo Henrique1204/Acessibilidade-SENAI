@@ -7,7 +7,7 @@ import ModalCores from '../ModalCores/ModalCores';
 import ModalAtalhos from '../ModalAtalhos/ModalAtalhos';
 import { useLocation } from 'react-router';
 
-const MenuLateral = ({ ativo, setAtivo }) => {
+const MenuLateral = ({ ativo, setAtivo, opcaoTema, setOpcaoTema }) => {
     const [modalAtalhos, setModalAtalhos] = React.useState(null);
     const [modalCores, setModalCores] = React.useState(false);
     const { pathname } = useLocation();
@@ -58,11 +58,11 @@ const MenuLateral = ({ ativo, setAtivo }) => {
                     <button
                         className={estilos.hamburguer}
                         onClick={menuToggle}
-                        aria-label="Abre o menu de navegação e configuração"
+                        aria-label={`${(ativo) ? 'Fecha' : 'Abre'} o menu de navegação e o painel de acessibilidade`}
                     >
-                        <span></span>
-                        <span></span>
-                        <span></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
                     </button>
 
                     { ativo && (
@@ -91,7 +91,7 @@ const MenuLateral = ({ ativo, setAtivo }) => {
 
             { modalAtalhos && <ModalAtalhos setAtivo={fecharModalAtalhos} /> }
 
-            { modalCores && <ModalCores setAtivo={fecharModalCores} /> }
+            { modalCores && <ModalCores setAtivo={fecharModalCores} opcaoTema={opcaoTema} setOpcaoTema={setOpcaoTema}/> }
         </>
     );
 };
