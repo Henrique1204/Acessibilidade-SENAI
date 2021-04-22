@@ -32,10 +32,10 @@ body.temaRoxo {
 
 body.temaEscuro {
   color: #f4f4f4;
-  background-color: #353540;
-  --corPrincipal: #06a;
-  --corSecundaria: #024;
-  --corBg: #22222a;
+  background-color: #121214;
+  --corPrincipal: #0090C4;
+  --corSecundaria: #004763;
+  --corBg: #0D0D0D;
 }
 
 h1,

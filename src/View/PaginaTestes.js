@@ -3,8 +3,24 @@ import ImagemIntro from '../Componentes/ImagemIntro/ImagemIntro';
 import LinkExterno from '../Componentes/LinkExterno/LinkExterno';
 import Head from '../Componentes/Util/Head';
 import imgIntro from '../Assets/intro_testes.png';
+import imgTemaAzul from '../Assets/testes_temaAzul.jpg';
+import imgTemaRoxo from '../Assets/testes_temaRoxo.jpg';
+import imgTemaEscuro from '../Assets/testes_temaEscuro.jpg';
 
-const PaginaTestes = () => {
+const PaginaTestes = ({ opcaoTema }) => {
+    const [temaImg, setTemaImg] = React.useState('');
+
+    React.useEffect(() => {
+        if (opcaoTema === 'temaRoxo') {
+            setTemaImg(imgTemaRoxo);
+        }
+        else if (opcaoTema === 'temaEscuro') {
+            setTemaImg(imgTemaEscuro);
+        }
+        else {
+            setTemaImg(imgTemaAzul);
+        };
+    }, [opcaoTema]);
     return (
         <section className="container">
             <Head
@@ -13,7 +29,7 @@ const PaginaTestes = () => {
             />
 
             <ImagemIntro
-                src={imgIntro}
+                src={temaImg}
                 alt="Imagem contendo vários exemplos de acessibilidade"
             />
 
