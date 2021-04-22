@@ -25,7 +25,7 @@ const PaginaRegras = ({ opcaoTema }) => {
         <section className="container">
             <ImagemIntro
                 src={temaImg}
-                alt="Imagem de um computador com um código na tela"
+                alt="Logo da organização WCAG"
             />
 
             <h2 className="titulo_sessao">WCAG 2.0</h2>

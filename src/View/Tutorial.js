@@ -27,7 +27,7 @@ const Tutorial = ({ opcaoTema }) => {
         <section className="container">
             <ImagemIntro
                 src={temaImg}
-                alt="Imagem de ilustração para tutoriais"
+                alt="Ilustração de uma pessoa com os braços abertos"
             />
 
             <p>
