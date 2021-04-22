@@ -2,7 +2,6 @@ import React from 'react';
 import ImagemIntro from '../Componentes/ImagemIntro/ImagemIntro';
 import LinkExterno from '../Componentes/LinkExterno/LinkExterno';
 import Head from '../Componentes/Util/Head';
-import imgIntro from '../Assets/intro_testes.png';
 import imgTemaAzul from '../Assets/testes_temaAzul.jpg';
 import imgTemaRoxo from '../Assets/testes_temaRoxo.jpg';
 import imgTemaEscuro from '../Assets/testes_temaEscuro.jpg';
