@@ -1,11 +1,12 @@
 import React from 'react';
 import ImagemIntro from '../Componentes/ImagemIntro/ImagemIntro';
+import LinkExterno from '../Componentes/LinkExterno/LinkExterno';
 import CardRegras from '../Componentes/CardRegras/CardRegras';
-import imgIntro from '../Assets/img_regras.jpg'
 import imgAria from '../Assets/exemplo_aria.jpg'
 import imgTemaAzul from '../Assets/regras_temaAzul.jpg';
 import imgTemaRoxo from '../Assets/regras_temaRoxo.jpg';
 import imgTemaEscuro from '../Assets/regras_temaEscuro.jpg';
+import Head from '../Componentes/Util/Head';
 
 const PaginaRegras = ({ opcaoTema }) => {
     const [temaImg, setTemaImg] = React.useState('');
@@ -23,6 +24,11 @@ const PaginaRegras = ({ opcaoTema }) => {
     }, [opcaoTema]);
     return (
         <section className="container">
+            <Head
+                title="WCAG 2.0"
+                description="Conheça as principais diretrizes e regras para garantir um conteúdo acessível."
+            />
+
             <ImagemIntro
                 src={temaImg}
                 alt="Logo da organização WCAG"
@@ -30,11 +36,11 @@ const PaginaRegras = ({ opcaoTema }) => {
 
             <h2 className="titulo_sessao">WCAG 2.0</h2>
 
-            <p>As Diretrizes de Acessibilidade para Conteúdo Web (WCAG) 2.0 possuem um grande conteúdo de recomendações, onde buscam fazer com que o conteúdo Web seja acessível para todos os usuários. Com a execução destas diretrizes, fará com que o conteúdo se torne acessível a um maior número de pessoas, entre elas, pessoas com cegueira e baixa visão, surdez e baixa audição, dificuldades de aprendizagem, limitações cognitivas, limitações de movimentos, incapacidade de fala, fotossensibilidade bem como as que tenham uma combinação destas limitações. Seguir estas diretrizes fará também com que o conteúdo Web se torne mais aproveitáveis aos usuários em geral.</p>
+            <p>As Diretrizes de Acessibilidade para Conteúdo Web (WCAG) 2.0 possuem um grande conteúdo de recomendações, onde buscam fazer com que o conteúdo Web seja acessível para todos os usuários. Com a execução destas diretrizes, fará com que o conteúdo se torne acessível a um maior número de pessoas, entre elas, pessoas com cegueira e baixa visão, surdez e baixa audição, dificuldades de aprendizagem, limitações cognitivas, limitações de movimentos, incapacidade de fala, fotossensibilidade bem como as que tenham uma combinação destas limitações. Seguir estas diretrizes fará também com que o conteúdo Web se torne mais aproveitáveis aos usuários em geral. <LinkExterno href="https://www.w3.org/Translations/WCAG20-pt-br/">referência</LinkExterno>.</p>
 
             <ul className="row">
                 <CardRegras>
-                    <h3>Preceptível</h3>
+                    <h3>Perceptível</h3>
 
                     <p>As informações e os componentes da interface do usuário devem ser apresentados em formas que possam ser percebidas pelo usuário.</p>
                 </CardRegras>
@@ -64,7 +70,7 @@ const PaginaRegras = ({ opcaoTema }) => {
 
             <p>Em um website simples com o conteúdo estático, o acesso à informação é feito normalmente começando a leitura no topo da página e percorrendo toda a informação até ao final da página. Num website mais avançado ou em um aplicativo web, eventualmente são usadas tecnologias que fazem com que apareça informação na página sem que a mesma seja carregada. Em termos de acessibilidade, por exemplo para uma pessoa com deficiencia visual, torna-se complicado perceber que abriu uma janela modal ou que apareceu uma mensagem de sucesso ou de erro no meio da página.</p>
 
-            <p className="metade">Com isso, foram criadas as especificações ARIA, que tem o objetivo de adicionar algum significado semântico a estes elementos, dar-lhes foco na interface quando eles aparecem na página. Por exemplo, um utilizador que esteja a navegar com um screen-reader pode receber avisos do aparecimento de janelas modais ou de mensagens importantes na página, podendo assim executar ações sobre elas.</p>
+            <p className="metade">Com isso, foram criadas as especificações ARIA, que tem o objetivo de adicionar algum significado semântico a estes elementos, dar-lhes foco na interface quando eles aparecem na página. Por exemplo, um utilizador que esteja a navegar com um screen-reader pode receber avisos do aparecimento de janelas modais ou de mensagens importantes na página, podendo assim executar ações sobre elas. <LinkExterno href="https://developer.mozilla.org/pt-BR/docs/Web/Accessibility/ARIA">referência</LinkExterno>.</p>
 
             <div className="img_container metade">
                 <img src={imgAria} alt="Exemplo de WAI-Aria em um menu hamburguer"/>
