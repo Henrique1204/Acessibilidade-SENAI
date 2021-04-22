@@ -13,7 +13,7 @@ const Rotas = ({ opcaoTema }) => {
             <Routes>
                 <Route path="/" element={<Home opcaoTema={opcaoTema}/>} />
                 <Route path="/regras" element={<PaginaRegras opcaoTema={opcaoTema}/>} />
-                <Route path="/testes" element={<PaginaTestes />} />
+                <Route path="/testes" element={<PaginaTestes opcaoTema={opcaoTema}/>} />
                 <Route path="/dicas" element={<Dicas />} />
                 <Route path="/tutorial" element={<Tutorial opcaoTema={opcaoTema}/>} />
                 <Route path="/desenvolvedores" element={<Desenvolvedores />} />
